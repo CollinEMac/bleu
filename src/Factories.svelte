@@ -9,7 +9,9 @@
         const width = ctx.canvas.width = 0.99 * window.innerWidth;
         const height = ctx.canvas.height = 0.25 * window.innerHeight;
 
-        const radius = 0.1 * height;
+        const rectangleWidth = 0.8 * height;
+        const rectangleHeight = 0.2 * height;
+
         let xValues;
         let yValues;
 
@@ -17,15 +19,15 @@
         if (playerCount == 4) {
 
             xValues = [
-                0.3 * width - radius,
-                0.6 * width - radius,
-                0.9 * width - radius,
+                0.3 * width - rectangleWidth,
+                0.6 * width - 2*rectangleWidth,
+                0.9 * width - 3*rectangleWidth,
             ]
 
             yValues = [
-                0.3 * height - radius,
-                0.6 * height - radius,
-                0.9 * height - radius,
+                0.3 * height - rectangleHeight,
+                0.6 * height - rectangleHeight,
+                0.9 * height - rectangleHeight,
             ]
         }
 
@@ -33,7 +35,7 @@
         for (const y in yValues) {
             for (const x in xValues) {
                 ctx.beginPath();
-                ctx.arc(xValues[x], yValues[y], radius, 0, 2 * Math.PI);
+                ctx.rect(xValues[x], yValues[y], rectangleWidth, rectangleHeight)
                 ctx.stroke();
             }
         }
