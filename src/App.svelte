@@ -3,6 +3,7 @@
 	import Factories from './Factories.svelte';
 	import LeftBoard from './LeftBoard.svelte';
 	import RightBoard from './RightBoard.svelte';
+	import Floor from './Floor.svelte';
 </script>
 
 <h1>Let's play Bleu!</h1>
@@ -13,3 +14,4 @@
 	<td><LeftBoard/></td>
 	<td><RightBoard/></td>
 </table>
+<Floor/>
