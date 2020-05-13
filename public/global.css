@@ -29,7 +29,17 @@ label {
 	display: block;
 }
 
-input, button, select, textarea {
+button {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4em;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	position: absolute;
+}
+
+input, select, textarea {
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0.4em;
